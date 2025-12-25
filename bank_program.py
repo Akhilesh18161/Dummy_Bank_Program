@@ -42,7 +42,7 @@ def bank_program():
             if amnt > 0 and amnt < bale:
                 bale -= amnt
                 print(f"${amnt} was sucessfully withdrawn")
-            elif amnt > 0:
+            elif amnt > bale:
                 print("Insufficient Fund")
             else:
                 print("Invalid Amount Entered")
