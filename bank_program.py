@@ -17,9 +17,8 @@ def bank_program():
         def inpt_check():
             nonlocal is_running
             inpt = int(input("Back (1)\nQuit (2)\n => "))
-            if inpt == 1:
-                pass
-            elif inpt == 2:
+
+            if inpt == 2:
                 print("Have a Nice Day!\nExiting......")
                 is_running = False
 
