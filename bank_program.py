@@ -1,3 +1,5 @@
+# **************** WELCOME ************************
+
 is_running = True
 print("Welcome to Bank program! \n******************************")
 print()
