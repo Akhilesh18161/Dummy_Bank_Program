@@ -29,15 +29,23 @@ def bank_program():
         def deposite():
             nonlocal bale
             amnt = float(input("Enter the amount you want to deposite: $"))
-            bale += amnt
-            print(f"${amnt} Was sucessfully added\n")
+            if amnt > 0 and amnt < 1000000000:
+                bale += amnt
+                print(f"${amnt} Was sucessfully added\n")
+            else:
+                print("Invalid Amount Entered!")
             inpt_check()
 
         def withdraw():
             nonlocal bale
             amnt = float(input("Enter the amount you want to Withdraw: $"))
-            bale -= amnt
-            print(f"${amnt} was sucessfully withdrawn")
+            if amnt > 0 and amnt > bale:
+                bale -= amnt
+                print(f"${amnt} was sucessfully withdrawn")
+            elif amnt < 0:
+                print("Insufficient Fund")
+            else:
+                print("Invalid Amount Entered")
             inpt_check()
 
         match usr_inpt:
